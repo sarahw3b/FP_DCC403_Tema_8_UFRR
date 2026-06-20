@@ -1,0 +1,15 @@
+# Executável compilado
+formalrace-checker
+
+# Arquivos objeto
+*.o
+
+# Arquivos gerados pelo solver
+*.cnf
+*.sat
+resultado.txt
+teste_res.txt
+output.cnf
+
+# Arquivos de sistema
+.DS_Store
