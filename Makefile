@@ -1,15 +1,22 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra -g
+CXXFLAGS = -std=c++11 -Wall -I.
 
-SRC = main.cpp src/parser.cpp src/cnf_gen.cpp src/solver.cpp src/reporter.cpp
 TARGET = formalrace-checker
+SRCS = main.cpp src/parser.cpp src/cnf_gen.cpp src/solver.cpp src/reporter.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)
 
-$(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(TARGET) *.cnf *.sat
+	rm -f $(OBJS) $(TARGET)
 
-.PHONY: all clean
+run: $(TARGET)
+	./$(TARGET) tests/cenario_a.c
+
+.PHONY: all clean run
