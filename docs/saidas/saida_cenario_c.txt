@@ -1,0 +1,17 @@
+
+ACESSOS EXTRAÍDOS:
+
+Thread: thread1, Variavel: saldo, Tipo: write, Linha: 12, Mutex: mutex1
+Thread: thread1, Variavel: estoque, Tipo: write, Linha: 14, Mutex: mutex2
+Thread: thread2, Variavel: estoque, Tipo: write, Linha: 23, Mutex: mutex2
+Thread: thread2, Variavel: saldo, Tipo: write, Linha: 25, Mutex: mutex1
+Nenhum par conflitante encontrado. Sem data races.
+
+
+RESULTADO:
+Nenhum data race encontrado.
+
+
+- RELATÓRIO DE ANÁLISE: -
+Nenhum data race encontrado.
+O código está seguro para execução concorrente.

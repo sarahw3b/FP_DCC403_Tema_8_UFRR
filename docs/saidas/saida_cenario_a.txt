@@ -1,0 +1,31 @@
+
+ACESSOS EXTRAÍDOS:
+
+Thread: writer, Variavel: contador, Tipo: write, Linha: 7, Mutex: nenhum
+Thread: reader, Variavel: contador, Tipo: read, Linha: 12, Mutex: nenhum
+Par conflitante: writer escreve, reader lê em contador (sem mutex comum)
+CNF gerado em output.cnf (3 variáveis, 3 cláusulas)
+
+
+RESULTADO:
+DATA RACE DETECTADO!
+
+
+- RELATÓRIO DE ANÁLISE: -
+DATA RACE DETECTADO!
+
+ACESSOS EXTRAÍDOS:
+  Thread: writer, Variavel: contador, Tipo: write, Linha: 7, Mutex: nenhum
+  Thread: reader, Variavel: contador, Tipo: read, Linha: 12, Mutex: nenhum
+
+PARES CONFLITANTES:
+  Escrita: writer (linha 7) em 'contador' | Mutex: nenhum
+  Leitura: reader (linha 12) em 'contador' | Mutex: nenhum
+  → Nenhum mutex comum protege ambos os acessos.
+
+SUGESTÃO DE CORREÇÃO:
+  Utilize o mesmo mutex para proteger ambos os acessos à variável compartilhada.
+  Exemplo:
+    pthread_mutex_lock(&mutex);
+    // acesso à variável
+    pthread_mutex_unlock(&mutex);

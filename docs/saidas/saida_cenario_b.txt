@@ -1,0 +1,15 @@
+
+ACESSOS EXTRAÍDOS:
+
+Thread: writer, Variavel: contador, Tipo: write, Linha: 8, Mutex: mutex
+Thread: reader, Variavel: contador, Tipo: read, Linha: 15, Mutex: mutex
+Nenhum par conflitante encontrado. Sem data races.
+
+
+RESULTADO:
+Nenhum data race encontrado.
+
+
+- RELATÓRIO DE ANÁLISE: -
+Nenhum data race encontrado.
+O código está seguro para execução concorrente.
