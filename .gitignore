@@ -1,15 +1,29 @@
-# Executável compilado
+# Compilados
+*.o
+*.obj
+*.exe
+*.out
+
+# Executável
 formalrace-checker
 
-# Arquivos objeto
-*.o
-
-# Arquivos gerados pelo solver
-*.cnf
-*.sat
-resultado.txt
-teste_res.txt
+# Arquivos gerados pelo programa
 output.cnf
+resultado.txt
 
-# Arquivos de sistema
+# Arquivos do sistema
+*.swp
+*.swo
+*~
 .DS_Store
+Thumbs.db
+
+# Diretórios de build
+build/
+bin/
+.vscode/
+.idea/
+
+# Arquivos temporários do editor
+*.log
+*.tmp
