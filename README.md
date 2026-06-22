@@ -303,7 +303,6 @@ O artigo completo no padrão SBC está disponível em `docs/artigo_formalrace.pd
 ## Declaração de Uso de IA
 
 Durante o desenvolvimento deste projeto foram utilizadas as ferramentas
-**Claude** (Anthropic), **DeepSeek** (DeepSeek AI) e **ChatGPT-4o** (OpenAI)
-como apoio técnico na estruturação do pipeline, revisão de código e redação.
+**Claude** (Anthropic) e **DeepSeek** (DeepSeek AI) como apoio técnico na estruturação do pipeline, revisão de código e redação.
 Todo o conteúdo conceitual, código-fonte e cenários de teste foram
 supervisionados e são de responsabilidade exclusiva da autora.
